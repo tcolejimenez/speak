@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- page header from fragment-->
+<!-- includes meta, general title (Speak) & bootstrap -->
+<head th:include="fragments/fragments :: head"></head>
+
+<body>
+
+<!-- nav bar from fragments -->
+<nav th:replace="fragments/fragments :: navbar"></nav>
+
+<!-- site header from fragments -->
+<header th:replace=" fragments/fragments :: header"></header>
+
+<!-- main page content -->
+<main class="container">
+<h1>Create a Post</h1>
+<form action="/posts/create" method="post" th:object="${post}">
+    <input type="text" th:field="*{title}" placeholder="Enter post title..." />
+    <br />
+    <input type="text" th:field="*{body}" placeholder="Enter post body..." />
+    <br />
+    <input type="submit" />
+</form>
+</main>
+<!-- footer fragment -->
+<footer th:replace="fragments/fragments :: footer"></footer>
+
+</body>
+</html>

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Post View</title>
 </head>
 <body>
+<h2>The latest post</h2>
+<h1 th:text="${post.title}"></h1>
+<h3 th:text="${post.author.email}"></h3>
+<p th:text="${post.body}"></p>
 
 </body>
 </html>

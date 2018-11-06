@@ -1,4 +1,4 @@
-package com.codeup.speak;
+package com.codeup.speak.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
